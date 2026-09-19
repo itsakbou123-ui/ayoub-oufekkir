@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Your Name - Videographer & Photographer | Cinematic video, photography, and visual storytelling.">
+    <meta name="keywords" content="your name, videographer, photographer, video editor, cinematography, photography, portfolio">
+    <meta name="author" content="Your Name">
+    <!-- PAGE TITLE -->
+    <title>Your Name - Videographer & Photographer</title>
+    <meta property="og:title" content="Your Name - Videographer & Photographer">
+    <meta property="og:description" content="Cinematic video, photography, and visual storytelling by Your Name.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/about/me.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Name - Videographer & Photographer">
+    <meta name="twitter:description" content="Cinematic video, photography, and visual storytelling by Your Name.">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <!-- ALL GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/fonts/remixicon.css" />
+    <!-- MAGNIFIC CSS -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- NICE SELECT CSS -->
+    <link rel="stylesheet" href="assets/css/nice-select.min.css" />
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <!-- MOBILE MENU CSS -->
+    <link rel="stylesheet" href="assets/css/mobilemenu.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <!-- SPACING CSS -->
+    <link rel="stylesheet" href="assets/css/spacing.css" />
+    <link rel="stylesheet" href="assets/css/blog.css" />
+    <!-- MAIN STYLE CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- RESPONSIVE CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        /* Hero positioning — reference-matched and responsive */
+        .hero-content {
+            position: relative;
+            transform: none !important;
+        }
+        .hero-title-group {
+            position: relative;
+            width: max-content;
+            margin: 0;
+            margin-left: 0;
+            left: calc((100vw - 100%) / 2 + 46.6vw);
+            top: 2vw;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero-content .arabic-name {
+            font-family: var(--title-font), "Arial", sans-serif !important;
+            direction: rtl;
+            unicode-bidi: isolate;
+            margin: 0 !important;
+        }
+        .hero-content .hero-role {
+            font-size: 12px !important;
+            line-height: 1 !important;
+            margin: -28px 0 0 !important;
+            text-align: center !important;
+            letter-spacing: 0 !important;
+            font-weight: 600 !important;
+            white-space: nowrap;
+        }
+        .hero-content > img {
+            right: auto !important;
+            left: calc((100vw - 100%) / 2 + 67.9vw) !important;
+            top: 0.7vw !important;
+            transform: translateX(-50%) !important;
+            margin-left: 0 !important;
+        }
+        .hero-title-group + .theme-btn {
+            margin-top: 55px;
+        }
+        @media (max-width: 991px) {
+            .hero-title-group {
+                left: 50%;
+                top: 2.5vw;
+            }
+            .hero-content > img {
+                left: 76% !important;
+                top: -2vw !important;
+            }
+        }
+        @media (max-width: 767px) {
+            .hero-title-group {
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+            }
+            .hero-content .hero-role {
+                font-size: 9px !important;
+                margin-top: -12px !important;
+            }
+            .hero-content > img {
+                left: 50% !important;
+                top: -105% !important;
+                transform: translateX(-50%) !important;
+                width: 160px !important;
+            }
+            .hero-title-group + .theme-btn {
+                margin-top: 35px;
+            }
+        }
+        .video-portfolio-box { position: relative; overflow: hidden; cursor: pointer; height: 0; padding-bottom: 56.25%; background: #111; }
+        .portfolio-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform .8s cubic-bezier(.2,.7,.2,1); }
+        .portfolio-video-overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.72)); pointer-events:none; }
+        .video-portfolio-box:hover .portfolio-video { transform:scale(1.045); }
+        .video-play-icon { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:74px; height:74px; border:1px solid rgba(255,255,255,.85); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(0,0,0,.22); opacity:.9; transition:.35s; z-index:2; }
+        .video-play-icon i { font-size:30px; margin-left:3px; }
+        .video-portfolio-box:hover .video-play-icon { transform:translate(-50%,-50%) scale(1.08); background:rgba(255,255,255,.12); }
+        .about-area .section-title p { font-size: 18px; line-height: 1.8; letter-spacing: .2px; }
+        .photography-projects-title { text-align:center; font-size:50px; margin:80px 0 40px; }
+        .photography-category-title { text-align:center; font-size:28px; margin:20px 0 30px; }
+        .photography-box { overflow:hidden; position:relative; border-radius:12px; }
+        .photography-box img { width:100%; height:auto; display:block; transition:transform .7s ease; }
+        .photography-box:hover img { transform:scale(1.035); }
+        .video-modal { position:fixed; inset:0; background:rgba(0,0,0,.94); z-index:99999; display:none; align-items:center; justify-content:center; padding:30px; }
+        .video-modal.is-open { display:flex; }
+        .video-modal video { max-width:94vw; max-height:88vh; width:auto; height:auto; box-shadow:0 20px 80px rgba(0,0,0,.6); }
+        .video-modal-close { position:absolute; top:20px; right:28px; width:48px; height:48px; border:1px solid rgba(255,255,255,.35); border-radius:50%; background:rgba(0,0,0,.3); color:#fff; font-size:30px; line-height:1; cursor:pointer; z-index:2; }
+        @media (max-width:767px) {
+            .video-portfolio-box { padding-bottom:56.25%; }
+            .photography-projects-title { font-size:38px; margin-top:55px; }
+            .video-modal { padding:15px; }
+            .video-modal video { max-width:96vw; max-height:82vh; }
+        }
+
+
+        /* Photography project titles: clean, centered typography matching the Testimonials heading */
+        .photography-category-title {
+            text-align: center !important;
+            font-family: var(--title-font) !important;
+            font-size: 60px !important;
+            line-height: 70px !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0 !important;
+            color: var(--heading-color) !important;
+            background: transparent !important;
+            padding: 0 !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            width: 100%;
+        }
+        .photography-category-title::before,
+        .photography-category-title::after { content: none !important; }
+        .photography-gallery .portfolio-category { display: none !important; }
+        @media (max-width: 767px) {
+            .photography-category-title {
+                font-size: 36px !important;
+                line-height: 44px !important;
+                padding: 0 15px !important;
+            }
+        }
+
+        /* Final polish: cinematic entrance animation for every portfolio item */
+        .reveal-item {
+            opacity: 0;
+            transform: translate3d(0, 34px, 0) scale(.975);
+            filter: blur(7px);
+            transition: opacity .85s cubic-bezier(.22,1,.36,1),
+                        transform .85s cubic-bezier(.22,1,.36,1),
+                        filter .85s cubic-bezier(.22,1,.36,1);
+            will-change: opacity, transform, filter;
+        }
+        .reveal-item.is-visible {
+            opacity: 1;
+            transform: translate3d(0,0,0) scale(1);
+            filter: blur(0);
+        }
+        .recent-work-grid .reveal-item:nth-child(1) { transition-delay:.03s; }
+        .recent-work-grid .reveal-item:nth-child(2) { transition-delay:.10s; }
+        .recent-work-grid .reveal-item:nth-child(3) { transition-delay:.17s; }
+        .recent-work-grid .reveal-item:nth-child(4) { transition-delay:.24s; }
+        .recent-work-grid .reveal-item:nth-child(5) { transition-delay:.31s; }
+        .recent-work-grid .reveal-item:nth-child(6) { transition-delay:.38s; }
+        .recent-work-grid .reveal-item:nth-child(7) { transition-delay:.45s; }
+
+        /* Clear visual separation between photography projects */
+        .photography-category-title {
+            margin-top: 105px !important;
+            margin-bottom: 38px !important;
+            letter-spacing: .2px;
+        }
+        .photography-projects-title + .row .photography-category-title { margin-top: 20px !important; }
+        .photography-gallery { margin-bottom: 75px !important; }
+
+        /* Contact section: balanced two-column layout */
+        .contact-layout { margin-top: 10px; }
+        .contact-layout > [class*="col-"] { align-items: stretch; }
+        .contact-content-part {
+            padding: 52px 55px 45px 0;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+        .contact-content-part img { margin-bottom: 28px; }
+        .contact-content-part p { margin-bottom: 14px; }
+        .contact-content-part h2 { margin-bottom: 30px; line-height: 1.08; }
+        .contact-form-area {
+            margin: 0;
+            padding: 42px 38px 30px;
+            display:flex;
+            align-items:center;
+        }
+        .contact-form-area form { width:100%; }
+        @media (max-width:991px) {
+            .contact-content-part { padding: 10px 0 45px; }
+            .contact-form-area { margin-top: 10px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-item { opacity:1; transform:none; filter:none; transition:none; }
+        }
+    </style>
+
+<style>
+/* Clean portfolio galleries */
+.photography-gallery .portfolio-item { display:flex; }
+.photography-gallery .portfolio-box { width:100%; }
+.photography-gallery .photography-box img { width:100%; aspect-ratio: 4 / 5; object-fit: cover; display:block; }
+@media (max-width:767px) { .photography-gallery .portfolio-box img { aspect-ratio: 4 / 5; } }
+</style>
+
+
+
+<style>
+/* Final contact + photography heading polish */
+.photography-category-title {
+  font-size: 46px !important;
+  line-height: 1.12 !important;
+  text-align: center !important;
+  max-width: 100% !important;
+  margin: 82px auto 34px !important;
+}
+.photography-projects-title + .row .photography-category-title { margin-top: 18px !important; }
+.contact-area { padding-top: 55px !important; padding-bottom: 70px !important; }
+.contact-layout { margin-top: 0 !important; }
+.contact-content-part { padding: 20px 45px 20px 0 !important; }
+.contact-content-part img { width: 86px !important; margin-bottom: 20px !important; }
+.contact-content-part p { font-size: 18px !important; margin-bottom: 10px !important; }
+.contact-content-part h2 { font-size: 42px !important; line-height: 1.08 !important; margin-bottom: 24px !important; }
+.contact-form-area { position: relative !important; margin: 0 !important; padding: 78px 34px 26px !important; }
+.contact-form-title { position: absolute; top: -88px; left: 0; right: 0; transform: none; text-align: center; font-family: var(--title-font); font-size: 38px; line-height: 1; font-weight: 600; text-transform: uppercase; color: var(--heading-color); z-index: 3; pointer-events: none; }
+.contact-form-area .form-group { margin-bottom: 24px !important; }
+.contact-form-area .form-group label { margin-bottom: 10px !important; }
+.contact-form-area .form-group .form-control { padding: 14px 18px !important; }
+.contact-form-area textarea.form-control { min-height: 110px !important; }
+.contact-form-area .theme-btn { padding: 13px 24px !important; }
+@media (max-width: 991px) {
+ .contact-content-part { padding: 10px 0 35px !important; }
+ .contact-form-title { font-size: 32px; top: -70px; }
+}
+@media (max-width: 767px) {
+ .photography-projects-title { margin-bottom: 24px !important; }
+ .photography-projects-title + .row .photography-category-title { margin-top: 0 !important; }
+ .photography-category-title { font-size: 30px !important; line-height: 1.2 !important; margin: 0 auto 25px !important; }
+ .contact-area { padding-top: 40px !important; }
+ .contact-form-area { padding: 65px 20px 22px !important; }
+ .contact-form-title { font-size: 27px; top: -58px; }
+}
+</style>
+
+
+<style>
+/* Contact layout — closely matching the supplied reference */
+.contact-area { padding-top: 42px !important; padding-bottom: 80px !important; }
+.contact-section-title {
+  width: 100%;
+  text-align: center;
+  font-family: var(--title-font) !important;
+  font-size: 46px;
+  line-height: 1.05;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--heading-color);
+  margin: 0 0 62px;
+}
+.contact-layout { margin-top: 0 !important; }
+.contact-content-part {
+  padding: 0 55px 0 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.contact-content-part img { width: 86px !important; height: 86px; object-fit: cover; margin: 0 0 24px !important; }
+.contact-content-part p { margin: 0 0 10px !important; }
+.contact-content-part h2 {
+  font-size: 36px !important;
+  line-height: 1.08 !important;
+  max-width: 440px;
+  margin: 0 0 28px !important;
+  overflow-wrap: normal;
+}
+.contact-form-area {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 34px 34px 26px !important;
+  align-items: flex-start !important;
+}
+.contact-form-area form { width: 100%; }
+.contact-form-title { display: none !important; }
+@media (max-width: 991px) {
+  .contact-section-title { font-size: 40px; margin-bottom: 48px; }
+  .contact-content-part { padding: 0 0 35px !important; }
+  .contact-content-part h2 { max-width: 520px; }
+}
+@media (max-width: 767px) {
+  .contact-area { padding-top: 32px !important; }
+  .contact-section-title { font-size: 32px; margin-bottom: 38px; }
+  .contact-content-part h2 { font-size: 30px !important; max-width: 100%; }
+  .contact-form-area { padding: 28px 20px 22px !important; }
+}
+</style>
+
+
+<style>
+/* Contact section: restore the original Contact markup styling only. */
+.contact-area {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    position: static !important;
+}
+.contact-area .container { max-width: 1140px !important; }
+.contact-content-part {
+    padding-right: 50px !important;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    display: block !important;
+}
+.contact-content-part h2 {
+    font-size: 50px !important;
+    line-height: normal !important;
+    max-width: none !important;
+    margin-bottom: 5px !important;
+}
+.contact-content-part p { font-size: 20px !important; }
+.contact-content-part img {
+    width: 100px !important;
+    height: 100px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    margin: 0 0 40px !important;
+}
+.contact-form-area {
+    position: static !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 50px 30px 20px 40px !important;
+    display: block !important;
+    align-items: initial !important;
+    box-sizing: border-box !important;
+}
+.contact-form-area form { width: auto !important; }
+.contact-section-title, .contact-form-title { display: none !important; }
+@media (max-width: 991px) {
+    .contact-area { padding-top: 70px !important; padding-bottom: 70px !important; }
+    .contact-content-part { padding-right: 0 !important; padding-bottom: 45px !important; }
+    .contact-content-part h2 { font-size: 42px !important; }
+    .contact-form-area { padding: 50px 30px 20px 40px !important; }
+}
+@media (max-width: 767px) {
+    .contact-area { padding-top: 60px !important; padding-bottom: 60px !important; }
+    .contact-content-part h2 { font-size: 30px !important; }
+    .contact-form-area { padding: 40px 20px 20px !important; }
+}
+</style>
+
+
+<style>
+/* Mobile-only fixes: keep the existing layout unchanged elsewhere. */
+@media only screen and (max-width: 767px) {
+  .main-hero-area .hero-content img {
+    top: -105% !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+    width: 160px !important;
+  }
+  .main-footer .footer-top > div a[href^="mailto:"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 15px !important;
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+}
+</style>
+
+
+
+
+<link rel="stylesheet" href="assets/css/mobile-responsive.css">
+</head>
+
+<body>
+
+    <!-- START SCROLL UP -->
+    <div class="progress-wrap cursor-pointer">
+        <i class="ri-arrow-up-s-line"></i>
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+
+    <!-- START MENU -->
+    <header class="main-header">
+        <div class="header-upper">
+            <div class="container">
+                <div class="header-inner">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2 col-md-6 col-6 col-sm-3">
+                            <div class="logo-area">
+                                <div class="logo">
+                                    <a href="#"><img src="assets/images/logo.png" alt="Portfolio image"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-6 col-6 col-sm-9">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul class="onepage">
+                                        <li><a href="#" class="linkstyle">Home</a></li>
+                                        <li><a href="#" class="linkstyle">Services</a></li>
+                                        <li><a href="#" class="linkstyle">Projects</a></li>
+                                        <li><a href="#" class="linkstyle">About</a></li>
+                                        <li><a href="#" class="linkstyle">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="side-menu-icon d-lg-none text-end">
+                                <a href="#" class="info-toggle-btn f-right sidebar-toggle-btn"><i class="fal fa-bars"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="sidebar__area">
+        <div class="sidebar__wrapper">
+            <div class="sidebar__close">
+                <button class="sidebar__close-btn" id="sidebar__close-btn">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+            <div class="sidebar__content mt-50 mb-20">
+                <div class="mobile-menu fix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body-overlay"></div>
+
+    <!-- START HERO -->
+    <section id="home" class="main-hero-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero-content wow fadeInUp text-center delay-0-2s">
+                        <img src="assets/images/about/me.jpg" alt="Portfolio image">
+                        <div class="hero-title-group">
+                            <h2 class="arabic-name">YOUR NAME</h2>
+                            <h4 class="hero-role">DIRECTOR | EDITOR | FILMMAKER</h4>
+                        </div>
+                        <a class="theme-btn" href="#">Get In touch</a>
+                    </div>
+                    <div class="company-list">
+                        <div class="scroller" data-direction="left" data-speed="slow">
+                            <div class="scroller__inner">
+                                <img src="assets/images/client-logos/partner1.png" alt="Portfolio image" />
+                                <img src="assets/images/client-logos/partner2.png" alt="Portfolio image" />
+                                <img src="assets/images/client-logos/partner3.png" alt="Portfolio image" />
+                                <img src="assets/images/client-logos/partner4.png" alt="Portfolio image" />
+                                <img src="assets/images/client-logos/partner5.png" alt="Portfolio image" />
+                                <img src="assets/images/client-logos/partner6.png" alt="Portfolio image" />
+                                <img src="assets/images/client-logos/partner7.png" alt="Portfolio image" />
+                                <img src="assets/images/client-logos/partner8.png" alt="Portfolio image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- START SERVICES -->
+    <section id="services" class="services-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="section-title section-black-title wow fadeInUp delay-0-2s">
+                        <h2>Services</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-7">
+                    <div class="service-item wow fadeInUp delay-0-4s">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <h5>Client Name</h5>
+                        <h4>Photography</h4>
+                        <p>Professional photography focused on lighting, composition, and detail to present brands and products with strong visual impact.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-7">
+                    <div class="service-item wow fadeInUp delay-0-6s">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <h5>Client Name</h5>
+                        <h4>Videography</h4>
+                        <p>High-quality video production that tells compelling brand stories through cinematic and engaging visuals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- START PORTFOLIO / RECENT WORK -->
+    <div class="projects-area" id="projects">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <div class="section-title section-white-title wow fadeInUp delay-0-2s text-center"><h2>Recent Work</h2></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row g-4 portfolio-grid recent-work-grid justify-content-center">
+                <div class="col-md-6 col-xl-3 portfolio-item category-1 reveal-item">
+                    <div class="portfolio-box video-portfolio-box" data-video="" role="button" tabindex="0" aria-label="Play Mercedes">
+                        <div class="video-placeholder">ADD VIDEO</div>
+                        <span class="portfolio-video-overlay"></span>
+                        <span class="video-play-icon"><i class="ri-play-fill"></i></span>
+                        <div class="portfolio-caption"><h1>PROJECT TITLE</h1></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 portfolio-item category-1 reveal-item">
+                    <div class="portfolio-box video-portfolio-box" data-video="" role="button" tabindex="0" aria-label="Play F1">
+                        <div class="video-placeholder">ADD VIDEO</div>
+                        <span class="portfolio-video-overlay"></span>
+                        <span class="video-play-icon"><i class="ri-play-fill"></i></span>
+                        <div class="portfolio-caption"><h1>PROJECT TITLE</h1></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 portfolio-item category-1 reveal-item">
+                    <div class="portfolio-box video-portfolio-box" data-video="" role="button" tabindex="0" aria-label="Play Event">
+                        <div class="video-placeholder">ADD VIDEO</div>
+                        <span class="portfolio-video-overlay"></span>
+                        <span class="video-play-icon"><i class="ri-play-fill"></i></span>
+                        <div class="portfolio-caption"><h1>PROJECT TITLE</h1></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 portfolio-item category-1 reveal-item">
+                    <div class="portfolio-box video-portfolio-box" data-video="" role="button" tabindex="0" aria-label="Play Luxury House">
+                        <div class="video-placeholder">ADD VIDEO</div>
+                        <span class="portfolio-video-overlay"></span>
+                        <span class="video-play-icon"><i class="ri-play-fill"></i></span>
+                        <div class="portfolio-caption"><h1>PROJECT TITLE</h1></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 portfolio-item category-1 reveal-item">
+                    <div class="portfolio-box video-portfolio-box" data-video="" role="button" tabindex="0" aria-label="Play Best Car of the Year">
+                        <div class="video-placeholder">ADD VIDEO</div>
+                        <span class="portfolio-video-overlay"></span>
+                        <span class="video-play-icon"><i class="ri-play-fill"></i></span>
+                        <div class="portfolio-caption"><h1>PROJECT TITLE</h1></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 portfolio-item category-1 reveal-item">
+                    <div class="portfolio-box video-portfolio-box" data-video="" role="button" tabindex="0" aria-label="Play Inwi">
+                        <div class="video-placeholder">ADD VIDEO</div>
+                        <span class="portfolio-video-overlay"></span>
+                        <span class="video-play-icon"><i class="ri-play-fill"></i></span>
+                        <div class="portfolio-caption"><h1>PROJECT TITLE</h1></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 portfolio-item category-1 reveal-item">
+                    <div class="portfolio-box video-portfolio-box" data-video="" role="button" tabindex="0" aria-label="Play Animation">
+                        <div class="video-placeholder">ADD VIDEO</div>
+                        <span class="portfolio-video-overlay"></span>
+                        <span class="video-play-icon"><i class="ri-play-fill"></i></span>
+                        <div class="portfolio-caption"><h1>PROJECT TITLE</h1></div>
+                    </div>
+                </div>
+                        </div>
+
+            <!-- START PHOTOGRAPHY PROJECTS -->
+            <div class="row reveal-item"><div class="col-12"><h2 class="photography-projects-title">Photography Projects</h2></div></div>
+
+            <div class="row reveal-item"><div class="col-12"><h3 class="photography-category-title">creative photography project 01</h3></div></div>
+            <div class="row g-4 justify-content-center mb-5 photography-gallery restaurant-gallery">
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/IMG_1414.JPG" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/IMG_1413.JPG" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/IMG_1415.JPG" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/DSC04185.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/IMG_1416.JPG" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/DSC04172-1.jpeg" alt="Portfolio image"></div></a></div>
+            </div>
+
+            <div class="row reveal-item"><div class="col-12"><h3 class="photography-category-title">creative photography project 02</h3></div></div>
+            <div class="row g-4 justify-content-center mb-5 photography-gallery caftan-gallery">
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Caftan Marocain/caftan-01.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Caftan Marocain/caftan-03.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Caftan Marocain/caftan-04.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Caftan Marocain/caftan-05.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Caftan Marocain/caftan-06.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Caftan Marocain/caftan-07.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Caftan Marocain/caftan-08.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Caftan Marocain/caftan-09.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Caftan Marocain/caftan-10.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Caftan Marocain/caftan-02.jpeg" alt="Portfolio image"></div></a></div>
+            </div>
+
+            <div class="row reveal-item"><div class="col-12"><h3 class="photography-category-title">creative photography project 03</h3></div></div>
+            <div class="row g-4 justify-content-center mb-5 photography-gallery yamaha-gallery">
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Yamaha/yamaha-01.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Yamaha/yamaha-02.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Yamaha/yamaha-03.jpeg" alt="Portfolio image"></div></a></div>
+                <div class="col-md-4 portfolio-item reveal-item"><a href="#" class="work-popup"><div class="portfolio-box photography-box"><img src="assets/images/photographs Projects/Yamaha/yamaha-04.jpeg" alt="Portfolio image"></div></a></div>
+            </div>
+
+    <!-- END PORTFOLIO / PHOTOGRAPHY -->
+
+
+
+    <!-- START TESTIMONIALS -->
+    <section class="testimonials-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="section-title section-black-title wow fadeInUp delay-0-2s">
+                        <h2>Testimonials</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="testimonial-item wow fadeInUp delay-0-2s">
+                        <div class="text">
+                            CLIENT TESTIMONIAL GOES HERE.
+                        </div>
+                        <div class="author">
+                            <img src="assets/images/testimonials/author1.jpg" alt="Portfolio image" />
+                        </div>
+                        <div class="testi-des"><h5>Client Name</h5></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="testimonial-item wow fadeInUp delay-0-4s">
+                        <div class="text">
+                            A truly professional videographer. The studio production quality, lighting, and attention to detail were outstanding. I highly recommend working with him.
+                        </div>
+                        <div class="author">
+                            <img src="assets/images/testimonials/author2.jpg" alt="Portfolio image" />
+                        </div>
+                        <div class="testi-des"><h5>Client Name</h5></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-item wow fadeInUp delay-0-6s">
+                        <div class="text">
+                            CLIENT TESTIMONIAL GOES HERE.
+                        </div>
+                        <div class="author">
+                            <img src="assets/images/testimonials/khalil-haddouch.png" alt="Portfolio image" />
+                        </div>
+                        <div class="testi-des"><h5>Client Name</h5></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-item wow fadeInUp delay-0-8s">
+                        <div class="text">
+                            Du concept au montage final, le processus a été fluide et efficace. Le contenu a généré un fort engagement et des résultats mesurables.
+                        </div>
+                        <div class="author">
+                            <img src="assets/images/testimonials/author4.jpg" alt="Portfolio image" />
+                        </div>
+                        <div class="testi-des"><h5>Client Name</h5></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-item wow fadeInUp delay-0-9s">
+                        <div class="text">
+                            Exceptional storytelling and high-end production quality. A true professional who understands how to translate ideas into powerful visuals.
+                        </div>
+                        <div class="author">
+                            <img src="assets/images/testimonials/author5.jpg" alt="Portfolio image" />
+                        </div>
+                        <div class="testi-des"><h5>Client Name</h5></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END TESTIMONIALS -->
+
+    <!-- START ABOUT -->
+    <section id="about" class="about-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="section-title section-white-title wow fadeInUp delay-0-2s">
+                        <h2>About Me</h2>
+                        <p>YOUR BIO GOES HERE. Replace this text with a short professional introduction about your experience, specialties, creative approach and the value you bring to clients.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 about-image">
+                    <img src="assets/images/about/about-red.jpg" alt="Portfolio image">
+                </div>
+                <div class="col-lg-8 col-sm-12">
+                    <div class="hero-counter-area d-flex justify-content-between wow fadeInUp delay-0-4s">
+                        <div class="counter-item counter-text-wrap">
+                            <span class="count-text plus" data-speed="3000" data-stop="0">0</span>
+                            <span class="counter-title">Years Of Experience</span>
+                        </div>
+                        <div class="counter-item counter-text-wrap">
+                            <span class="count-text" data-speed="3000" data-stop="0">0</span>
+                            <span class="counter-title">Complete Projects</span>
+                        </div>
+                        <div class="counter-item counter-text-wrap">
+                            <span class="count-text percent" data-speed="3000" data-stop="0">0</span>
+                            <span class="counter-title">Client Satisfactions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT -->
+
+    <!-- START CONTACT -->
+    <section id="contact" class="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="section-title section-black-title wow fadeInUp delay-0-2s">
+                        <h2>Contact Me</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-content-part wow fadeInUp delay-0-2s">
+                        <img src="assets/images/about/me.jpg" alt="Portfolio image">
+                        <p>Are you ready?</p>
+                        <h2>Elevate Your Brand experience to the next level</h2>
+                        
+                        <div class="single-contact wow fadeInUp" data-wow-delay=".6s">
+                            <div class="about-social">
+                                <ul>
+                                    <li><a href=""><i class="ri-facebook-circle-fill"></i></a></li>
+                                    <li><a href=""><i class="ri-twitter-x-line"></i></a></li>
+                                    <li><a href=""><i class="ri-linkedin-fill"></i></a></li>
+                                    <li><a href=""><i class="ri-github-line"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form contact-form-area wow fadeInUp delay-0-4s">
+                        <form id="contactForm" class="contact-form" action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Full Name</label>
+                                        <input type="text" id="name" class="form-control" value="" placeholder="Steve Milner" required="" data-error="Please enter your Name" />
+                                        <label for="name" class="for-icon"><i class="far fa-user"></i></label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" class="form-control" value="" placeholder="hello@websitename.com" required="" data-error="Please enter your Email" />
+                                        <label for="email" class="for-icon"><i class="far fa-envelope"></i></label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="subject">Subject</label>
+                                        <input type="text" id="subject" class="form-control" value="" placeholder="Your Subject" required="" data-error="Please enter your Subject" />
+                                        <label for="subject" class="for-icon"><i class="far fa-user"></i></label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="message">Your Message</label>
+                                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Write Your message" required="" data-error="Please Write your Message"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-0">
+                                        <button type="submit" class="theme-btn">
+                                            Send Me Message <i class="ri-mail-line"></i>
+                                        </button>
+                                        <div id="msgSubmit" class="hidden"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <p class="input-success">We have received your mail, We will get back to you soon!</p>
+                                    <p class="input-error">Sorry, Message could not send! Please try again.</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END CONTACT -->
+
+
+    <!-- LOCAL VIDEO PLAYER -->
+    <div class="video-modal" id="portfolioVideoModal" aria-hidden="true">
+        <button class="video-modal-close" type="button" aria-label="Close video">×</button>
+        <video id="portfolioModalVideo" controls playsinline></video>
+    </div>
+
+    <!-- START FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-top">
+                        <h2 style="text-align:center;font-size:40px;margin:60px 0;">Have a project in mind?</h2>
+                        <div style="text-align:center;margin-top:20px;">
+                            <a href="#"
+                                style="font-size:60px;color:white;text-decoration:none;transition:0.4s;display:inline-block;font-weight:600;"
+                                onmouseover="this.style.color='#0068ff'"
+                                onmouseout="this.style.color='white'">
+                                your@email.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <p class="copy-right-text">&copy; Copyright 2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- JQUERY JS -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/appear.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/mobilemenu.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/lenis.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        // Smooth staggered reveal on entry, inspired by the supplied reference video.
+        (function () {
+            const items = document.querySelectorAll('.reveal-item');
+            if (!items.length) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                items.forEach(function (item) { item.classList.add('is-visible'); });
+                return;
+            }
+            const observer = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
+            items.forEach(function (item) { observer.observe(item); });
+        })();
+    </script>
+
+    <script>
+        (function () {
+            const modal = document.getElementById('portfolioVideoModal');
+            const video = document.getElementById('portfolioModalVideo');
+            const closeBtn = modal ? modal.querySelector('.video-modal-close') : null;
+            if (!modal || !video) return;
+            function openVideo(src) {
+                if (!src) return;
+                video.src = src;
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                video.play().catch(function () {});
+            }
+            function closeVideo() {
+                video.pause();
+                video.removeAttribute('src');
+                video.load();
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+            }
+            document.querySelectorAll('.video-portfolio-box').forEach(function (card) {
+                card.addEventListener('click', function () { openVideo(card.dataset.video); });
+                card.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVideo(card.dataset.video); }
+                });
+            });
+            closeBtn.addEventListener('click', closeVideo);
+            modal.addEventListener('click', function (e) { if (e.target === modal) closeVideo(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('is-open')) closeVideo(); });
+        })();
+    </script>
+
+<script>
+(function () {
+  function protectMedia() {
+    document.querySelectorAll('video').forEach(function (video) {
+      video.setAttribute('controlsList', 'nodownload');
+      video.setAttribute('disablePictureInPicture', '');
+      video.setAttribute('draggable', 'false');
+    });
+    document.querySelectorAll('img').forEach(function (img) {
+      img.setAttribute('draggable', 'false');
+    });
+  }
+
+  document.addEventListener('contextmenu', function (e) {
+    if (e.target.closest('img, video')) e.preventDefault();
+  });
+
+  document.addEventListener('dragstart', function (e) {
+    if (e.target.closest('img, video')) e.preventDefault();
+  });
+
+  document.addEventListener('DOMContentLoaded', protectMedia);
+  protectMedia();
+
+  // Also protect videos/images added dynamically by the site scripts.
+  new MutationObserver(protectMedia).observe(document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script>
+
+
+
+
+
+<style>
+/* Restaurant photography: 55% visual size, 3-column layout, grouped together with whitespace on the outer sides */
+.restaurant-gallery {
+  display: grid !important;
+  grid-template-columns: repeat(3, 18.3333%) !important;
+  column-gap: 2% !important;
+  row-gap: 1.5rem !important;
+  justify-content: center !important;
+}
+.restaurant-gallery .portfolio-item {
+  width: 100% !important;
+  max-width: none !important;
+  flex: none !important;
+}
+.restaurant-gallery .photography-box {
+  width: 100% !important;
+  margin: 0 !important;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .restaurant-gallery {
+    grid-template-columns: repeat(2, 25.6667%) !important;
+    column-gap: 3% !important;
+  }
+}
+@media (max-width: 767px) {
+  .restaurant-gallery {
+    grid-template-columns: 55% !important;
+    row-gap: 1.5rem !important;
+  }
+}
+</style>
+
+
+<style>
+/* Caftan + Yamaha photography: 80% visual size, centered within the same grid cells */
+.caftan-gallery .photography-box,
+.yamaha-gallery .photography-box {
+  width: 80% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+
+
+<style id="mobile-photography-grid-final">
+/* Final mobile photography grids: override Bootstrap/flex sizing only below 768px. */
+@media (max-width: 767.98px) {
+  .restaurant-gallery,
+  .caftan-gallery,
+  .yamaha-gallery {
+    display: grid !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    justify-content: stretch !important;
+    align-items: start !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .restaurant-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: clamp(8px, 2.5vw, 12px) !important;
+  }
+
+  .caftan-gallery,
+  .yamaha-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: clamp(10px, 3vw, 14px) !important;
+  }
+
+  .restaurant-gallery .portfolio-item,
+  .caftan-gallery .portfolio-item,
+  .yamaha-gallery .portfolio-item {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    flex: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .restaurant-gallery .portfolio-item > a,
+  .caftan-gallery .portfolio-item > a,
+  .yamaha-gallery .portfolio-item > a {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .restaurant-gallery .photography-box,
+  .caftan-gallery .photography-box,
+  .yamaha-gallery .photography-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .restaurant-gallery .photography-box img,
+  .caftan-gallery .photography-box img,
+  .yamaha-gallery .photography-box img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 5 !important;
+    object-fit: cover !important;
+  }
+}
+</style>
+
+<style id="cinematic-photography-image-reveal">
+/* Premium reveal: ONLY images inside the three photography galleries. */
+.restaurant-gallery .photography-box img,
+.caftan-gallery .photography-box img,
+.yamaha-gallery .photography-box img {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0) scale(0.96);
+  transform-origin: center center;
+  will-change: opacity, transform;
+  transition: opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.restaurant-gallery .portfolio-item:nth-child(1) img,
+.caftan-gallery .portfolio-item:nth-child(1) img,
+.yamaha-gallery .portfolio-item:nth-child(1) img { transition-delay: 0ms; }
+.restaurant-gallery .portfolio-item:nth-child(2) img,
+.caftan-gallery .portfolio-item:nth-child(2) img,
+.yamaha-gallery .portfolio-item:nth-child(2) img { transition-delay: 70ms; }
+.restaurant-gallery .portfolio-item:nth-child(3) img,
+.caftan-gallery .portfolio-item:nth-child(3) img,
+.yamaha-gallery .portfolio-item:nth-child(3) img { transition-delay: 140ms; }
+.restaurant-gallery .portfolio-item:nth-child(4) img,
+.caftan-gallery .portfolio-item:nth-child(4) img,
+.yamaha-gallery .portfolio-item:nth-child(4) img { transition-delay: 210ms; }
+.restaurant-gallery .portfolio-item:nth-child(5) img,
+.caftan-gallery .portfolio-item:nth-child(5) img,
+.yamaha-gallery .portfolio-item:nth-child(5) img { transition-delay: 280ms; }
+.restaurant-gallery .portfolio-item:nth-child(6) img,
+.caftan-gallery .portfolio-item:nth-child(6) img,
+.yamaha-gallery .portfolio-item:nth-child(6) img { transition-delay: 350ms; }
+.restaurant-gallery .portfolio-item:nth-child(7) img,
+.caftan-gallery .portfolio-item:nth-child(7) img,
+.yamaha-gallery .portfolio-item:nth-child(7) img { transition-delay: 420ms; }
+.restaurant-gallery .portfolio-item:nth-child(8) img,
+.caftan-gallery .portfolio-item:nth-child(8) img,
+.yamaha-gallery .portfolio-item:nth-child(8) img { transition-delay: 490ms; }
+.restaurant-gallery .portfolio-item:nth-child(9) img,
+.caftan-gallery .portfolio-item:nth-child(9) img,
+.yamaha-gallery .portfolio-item:nth-child(9) img { transition-delay: 560ms; }
+.restaurant-gallery .portfolio-item:nth-child(10) img,
+.caftan-gallery .portfolio-item:nth-child(10) img,
+.yamaha-gallery .portfolio-item:nth-child(10) img { transition-delay: 630ms; }
+
+.restaurant-gallery .photography-box img.cinematic-reveal-visible,
+.caftan-gallery .photography-box img.cinematic-reveal-visible,
+.yamaha-gallery .photography-box img.cinematic-reveal-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .restaurant-gallery .photography-box img,
+  .caftan-gallery .photography-box img,
+  .yamaha-gallery .photography-box img {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+</style>
+
+<script>
+// Scroll-triggered cinematic image reveal, scoped strictly to the three photography galleries.
+(function () {
+  var selector = '.restaurant-gallery .photography-box img, .caftan-gallery .photography-box img, .yamaha-gallery .photography-box img';
+  var images = document.querySelectorAll(selector);
+  if (!images.length) return;
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    images.forEach(function (img) { img.classList.add('cinematic-reveal-visible'); });
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    images.forEach(function (img) { img.classList.add('cinematic-reveal-visible'); });
+    return;
+  }
+
+  var observer = new IntersectionObserver(function (entries, obs) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('cinematic-reveal-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+
+  images.forEach(function (img) { observer.observe(img); });
+})();
+</script>
+</body>
+
+</html>
