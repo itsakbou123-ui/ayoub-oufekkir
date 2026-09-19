@@ -1,0 +1,403 @@
+/*
+ * Mobile/tablet responsive layer
+ * Desktop (992px and above) is intentionally untouched.
+ * This layer adapts the existing design rather than creating a new one.
+ */
+
+@media (max-width: 991px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+
+  .container { width: 100%; max-width: 100%; }
+
+  /* Header: keep the existing desktop identity, use the existing mobile menu. */
+  .main-header .header-upper { width: 100%; }
+  .header-inner { padding: clamp(18px, 4vw, 28px) 0; }
+  .main-header .container { padding-left: clamp(16px, 4vw, 28px); padding-right: clamp(16px, 4vw, 28px); }
+  .logo img { width: clamp(58px, 8vw, 70px); height: auto; }
+
+  /* Hero: image + name/role behave as one responsive composition. */
+  .main-hero-area {
+    padding-top: clamp(145px, 27vw, 205px);
+    padding-bottom: clamp(65px, 10vw, 100px);
+  }
+  .main-hero-area > .container { padding-left: clamp(16px, 4vw, 30px); padding-right: clamp(16px, 4vw, 30px); }
+  .hero-content {
+    width: min(100%, 620px);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: clamp(12px, 3vw, 24px);
+    row-gap: 0;
+    text-align: center;
+    transform: none !important;
+  }
+  .hero-content > img {
+    position: relative !important;
+    grid-column: 2;
+    grid-row: 1;
+    order: 2;
+    inset: auto !important;
+    transform: none !important;
+    width: clamp(92px, 22vw, 132px) !important;
+    max-width: 100%;
+    height: auto;
+    margin: 0 !important;
+    z-index: 0;
+    justify-self: end;
+    border-radius: 50%;
+  }
+  .hero-title-group {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    order: 1;
+    inset: auto !important;
+    transform: none !important;
+    width: auto;
+    max-width: 100%;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+  }
+  .hero-content .arabic-name {
+    font-size: clamp(52px, 15vw, 82px) !important;
+    line-height: .9 !important;
+    white-space: nowrap;
+    margin: 0 !important;
+    max-width: 100%;
+  }
+  .hero-content .hero-role {
+    font-size: clamp(8px, 2.25vw, 12px) !important;
+    line-height: 1 !important;
+    margin: clamp(3px, .8vw, 7px) 0 0 !important;
+    white-space: nowrap;
+    max-width: 100%;
+    letter-spacing: 0 !important;
+  }
+  .hero-title-group + .theme-btn {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    order: 3;
+    justify-self: center;
+    margin-top: clamp(24px, 6vw, 40px) !important;
+    width: min(100%, clamp(132px, 38vw, 170px));
+    min-height: 48px;
+    padding-inline: 18px;
+  }
+
+  /* Client logos: same moving strip, scaled fluidly and kept inside viewport. */
+  .company-list { width: 100%; overflow: hidden; margin-top: clamp(38px, 8vw, 58px); }
+  .scroller { width: 100%; overflow: hidden; }
+  .scroller__inner { align-items: center; }
+  .scroller__inner img {
+    width: clamp(76px, 20vw, 108px) !important;
+    height: auto;
+    max-height: 70px;
+    object-fit: contain;
+    margin-inline: clamp(16px, 4vw, 28px) !important;
+  }
+
+  /* Shared section rhythm. */
+  .services-area,
+  .projects-area,
+  .testimonials-area,
+  .about-area,
+  .contact-area {
+    overflow: hidden;
+  }
+  .section-title { margin-bottom: clamp(30px, 7vw, 52px); }
+  .section-title h2 {
+    font-size: clamp(34px, 9vw, 52px) !important;
+    line-height: 1.05 !important;
+    padding-bottom: clamp(8px, 2vw, 16px);
+    margin-bottom: 0 !important;
+  }
+
+  /* Services: one clean column on narrow screens, preserving the existing cards. */
+  .services-area { padding-top: clamp(55px, 9vw, 90px); padding-bottom: clamp(60px, 10vw, 95px); }
+  .services-area .row:last-child { row-gap: clamp(14px, 4vw, 24px); }
+  .services-area .row:last-child > [class*="col-"] { width: 100%; max-width: 100%; }
+  .service-item {
+    width: 100%;
+    margin-bottom: 0;
+    padding: clamp(28px, 7vw, 48px) clamp(22px, 6vw, 38px);
+    border-radius: 16px;
+  }
+  .service-item h5 { margin-bottom: clamp(28px, 7vw, 45px); font-size: clamp(22px, 6vw, 30px); }
+  .service-item h4 { font-size: clamp(28px, 8vw, 40px); line-height: 1.05; margin-top: 12px; margin-bottom: 14px; }
+  .service-item p { font-size: clamp(14px, 3.8vw, 17px); line-height: 1.65; }
+  .service-item i { font-size: clamp(24px, 7vw, 32px); top: 28px; right: 24px; }
+
+  /* Recent work: one responsive column; media keeps its native 16:9 presentation. */
+  .projects-area { padding-top: clamp(55px, 9vw, 90px); padding-bottom: clamp(65px, 11vw, 105px); }
+  .recent-work-grid { margin-left: 0; margin-right: 0; row-gap: clamp(16px, 4vw, 24px) !important; }
+  .recent-work-grid > .portfolio-item { width: 100%; max-width: 100%; padding-left: 0; padding-right: 0; }
+  .video-portfolio-box { width: 100%; padding-bottom: 56.25%; border-radius: 8px; }
+  .video-play-icon { width: clamp(52px, 14vw, 68px); height: clamp(52px, 14vw, 68px); }
+  .video-play-icon i { font-size: clamp(22px, 6vw, 30px); }
+  .portfolio-box .portfolio-category { top: 12px; right: 12px; font-size: clamp(9px, 2.5vw, 12px); padding: .42em .75em; max-width: calc(100% - 24px); }
+  .portfolio-box .portfolio-caption { padding: 0 18px 18px; }
+  .portfolio-box .portfolio-caption * { font-size: clamp(22px, 6vw, 30px); line-height: 1.1; }
+
+  /* Photography: one column, preserving each image's actual aspect ratio. */
+  .photography-projects-title {
+    font-size: clamp(30px, 8.5vw, 42px) !important;
+    line-height: 1.08 !important;
+    margin: clamp(55px, 12vw, 80px) 0 clamp(28px, 7vw, 42px) !important;
+  }
+  .photography-category-title {
+    font-size: clamp(23px, 6.5vw, 34px) !important;
+    line-height: 1.15 !important;
+    padding-inline: 10px !important;
+    margin-top: clamp(55px, 11vw, 90px) !important;
+    margin-bottom: clamp(22px, 6vw, 34px) !important;
+  }
+  .photography-projects-title + .row .photography-category-title { margin-top: 0 !important; }
+  .photography-gallery { margin-bottom: clamp(50px, 11vw, 80px) !important; row-gap: 16px !important; }
+  .photography-gallery > .portfolio-item { width: 100%; max-width: 100%; padding-left: 0; padding-right: 0; }
+  .photography-gallery .portfolio-box img,
+  .photography-gallery .photography-box img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: initial !important;
+  }
+
+  /* Testimonials: full-width cards with readable text and consistent spacing. */
+  .testimonials-area { padding-top: clamp(55px, 10vw, 90px); padding-bottom: clamp(55px, 10vw, 90px); }
+  .testimonials-area .row:nth-child(2) { row-gap: 16px; }
+  .testimonials-area .row:nth-child(2) > [class*="col-"] { width: 100%; max-width: 100%; }
+  .testimonial-item { height: auto; margin-bottom: 0; padding: clamp(22px, 6vw, 32px); }
+  .testimonial-item .text { font-size: clamp(14px, 3.9vw, 17px); line-height: 1.65; }
+  .testimonial-item .testi-des h5 { font-size: clamp(16px, 4.4vw, 20px); line-height: 1.3; }
+
+  /* About: prevent the long uppercase bio and counters from forcing overflow. */
+  .about-area { padding-top: clamp(55px, 10vw, 90px); padding-bottom: clamp(60px, 10vw, 95px); }
+  .about-area .section-title p {
+    font-size: clamp(14px, 3.8vw, 18px) !important;
+    line-height: 1.7 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: anywhere;
+  }
+  .about-area .about-image { margin-bottom: clamp(26px, 7vw, 40px); }
+  .about-area .about-image img { width: 100%; height: auto; display: block; }
+  .hero-counter-area { margin-top: 0; display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .hero-counter-area .count-text { font-size: clamp(32px, 9vw, 50px); }
+  .hero-counter-area .counter-title { font-size: clamp(11px, 3vw, 14px); line-height: 1.35; }
+
+  /* Contact: stack the existing two columns, keep the background and form styling. */
+  .contact-area {
+    margin-top: clamp(55px, 10vw, 80px) !important;
+    padding-top: clamp(45px, 9vw, 70px) !important;
+    padding-bottom: clamp(55px, 10vw, 80px) !important;
+  }
+  .contact-area > .container { padding-inline: clamp(16px, 4vw, 30px); }
+  .contact-area > .container > .row:nth-child(2) { display: flex; flex-direction: column; row-gap: 10px; }
+  .contact-area > .container > .row:nth-child(2) > [class*="col-"] { width: 100%; max-width: 100%; padding-inline: 0; }
+  .contact-content-part { padding: 0 0 clamp(28px, 7vw, 45px) !important; }
+  .contact-content-part img { width: clamp(70px, 20vw, 86px) !important; height: clamp(70px, 20vw, 86px) !important; margin-bottom: 18px !important; }
+  .contact-content-part p { font-size: clamp(14px, 3.8vw, 18px) !important; }
+  .contact-content-part h2 { font-size: clamp(28px, 8vw, 42px) !important; line-height: 1.08 !important; margin-bottom: 24px !important; }
+  .contact-form-area { padding: clamp(24px, 6vw, 40px) clamp(18px, 5vw, 28px) 22px !important; width: 100% !important; box-sizing: border-box; }
+  .contact-form-area .form-group { margin-bottom: 20px !important; }
+  .contact-form-area .form-group .form-control { width: 100%; box-sizing: border-box; padding: 14px 16px !important; }
+  .contact-form-area textarea.form-control { min-height: 115px !important; }
+  .contact-form-area .theme-btn { max-width: 100%; }
+
+  /* Footer: responsive typography instead of the desktop inline sizes. */
+  .main-footer { overflow: hidden; }
+  .footer-top { padding-top: clamp(55px, 10vw, 90px); padding-bottom: clamp(50px, 9vw, 80px); }
+  .footer-top h2 { font-size: clamp(28px, 8vw, 40px) !important; line-height: 1.1 !important; margin: 0 0 28px !important; }
+  .main-footer .footer-top > div { margin-top: 0 !important; }
+  .main-footer .footer-top > div a[href^="mailto:"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    font-size: clamp(19px, 5.6vw, 30px) !important;
+    line-height: 1.25 !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+  p.copy-right-text { font-size: 11px; text-align: center; text-align-last: center; }
+}
+
+@media (max-width: 575px) {
+  .hero-content { width: min(100%, 390px); grid-template-columns: minmax(0, 1fr) clamp(88px, 25vw, 112px); column-gap: clamp(8px, 3vw, 16px); }
+  .hero-content .arabic-name { font-size: clamp(48px, 14vw, 68px) !important; }
+  .hero-content .hero-role { font-size: clamp(7px, 2.15vw, 10px) !important; }
+  .hero-content > img { width: clamp(88px, 25vw, 112px) !important; }
+  .hero-title-group + .theme-btn { margin-top: clamp(22px, 6vw, 32px) !important; }
+
+  .hero-counter-area { grid-template-columns: 1fr; gap: 18px; }
+  .hero-counter-area .counter-item { display: grid; grid-template-columns: minmax(70px, auto) 1fr; align-items: center; text-align: left; column-gap: 12px; }
+  .hero-counter-area .count-text { text-align: right; }
+  .hero-counter-area .counter-title { text-align: left; }
+}
+
+@media (max-width: 390px) {
+  .main-header .container { padding-left: 14px; padding-right: 14px; }
+  .main-hero-area > .container { padding-left: 14px; padding-right: 14px; }
+  .hero-content { grid-template-columns: minmax(0, 1fr) 88px; column-gap: 8px; }
+  .hero-content .arabic-name { font-size: 46px !important; }
+  .hero-content .hero-role { font-size: 7px !important; }
+  .hero-content > img { width: 88px !important; }
+  .service-item { padding-inline: 20px; }
+}
+
+/* =========================================================
+   FINAL MOBILE GALLERY + ABOUT/EMAIL CORRECTIONS
+   Desktop (992px+) remains untouched.
+   ========================================================= */
+@media (max-width: 767px) {
+  /* ABOUT ME — center the existing image without changing its proportions */
+  .about-area .about-image {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .about-area .about-image img {
+    display: block !important;
+    width: min(100%, 330px) !important;
+    max-width: 330px !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* FOOTER EMAIL — always one line, sized fluidly so every character remains visible */
+  .main-footer .footer-top > div a[href^="mailto:"] {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    font-size: clamp(11px, 3.65vw, 18px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0 !important;
+  }
+  .main-footer .footer-top > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  /* FOOD / RESTAURANT — exactly 3 columns × 2 rows on phones */
+  .restaurant-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    column-gap: clamp(7px, 2.2vw, 11px) !important;
+    row-gap: clamp(9px, 2.8vw, 14px) !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .restaurant-gallery > .portfolio-item {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    flex: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .restaurant-gallery .photography-box {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* CAFTAN — exactly 2 columns on phones */
+  .caftan-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: clamp(10px, 3vw, 14px) !important;
+    row-gap: clamp(12px, 3.5vw, 18px) !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .caftan-gallery > .portfolio-item {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    flex: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .caftan-gallery .photography-box {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* YAMAHA — exactly 2 columns on phones */
+  .yamaha-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: clamp(10px, 3vw, 14px) !important;
+    row-gap: clamp(12px, 3.5vw, 18px) !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .yamaha-gallery > .portfolio-item {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    flex: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .yamaha-gallery .photography-box {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Keep every photography item inside its grid cell and preserve the existing image ratio. */
+  .restaurant-gallery .photography-box img,
+  .caftan-gallery .photography-box img,
+  .yamaha-gallery .photography-box img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-width: 0 !important;
+  }
+
+  /* Final mobile guard: prevent accidental horizontal overflow from rows/containers. */
+  .projects-area .container,
+  .about-area .container,
+  .contact-area .container,
+  .main-footer .container {
+    max-width: 100% !important;
+    overflow-x: clip;
+  }
+}
+
+/* Extra-small phones: preserve the same grid structure while keeping comfortable gutters. */
+@media (max-width: 390px) {
+  .restaurant-gallery,
+  .caftan-gallery,
+  .yamaha-gallery {
+    column-gap: 8px !important;
+  }
+  .restaurant-gallery { row-gap: 10px !important; }
+  .caftan-gallery,
+  .yamaha-gallery { row-gap: 12px !important; }
+  .about-area .about-image img { width: min(100%, 300px) !important; }
+  .main-footer .footer-top > div a[href^="mailto:"] {
+    font-size: clamp(11px, 3.55vw, 14px) !important;
+  }
+}
