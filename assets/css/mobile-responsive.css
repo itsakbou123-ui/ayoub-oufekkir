@@ -126,9 +126,16 @@
   .service-item p { font-size: clamp(14px, 3.8vw, 17px); line-height: 1.65; }
   .service-item i { font-size: clamp(24px, 7vw, 32px); top: 28px; right: 24px; }
 
-  /* Recent work: one responsive column; media keeps its native 16:9 presentation. */
+  /* Recent work: two responsive columns; media keeps its existing presentation. */
   .projects-area { padding-top: clamp(55px, 9vw, 90px); padding-bottom: clamp(65px, 11vw, 105px); }
-  .recent-work-grid { margin-left: 0; margin-right: 0; row-gap: clamp(16px, 4vw, 24px) !important; }
+  .recent-work-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(10px, 3vw, 16px) !important;
+    row-gap: clamp(16px, 4vw, 24px) !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
   .recent-work-grid > .portfolio-item { width: 100%; max-width: 100%; padding-left: 0; padding-right: 0; }
   .video-portfolio-box { width: 100%; padding-bottom: 56.25%; border-radius: 8px; }
   .video-play-icon { width: clamp(52px, 14vw, 68px); height: clamp(52px, 14vw, 68px); }
