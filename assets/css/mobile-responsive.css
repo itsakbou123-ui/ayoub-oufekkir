@@ -24,23 +24,20 @@
   .hero-content {
     width: min(100%, 620px);
     margin-inline: auto;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    column-gap: clamp(12px, 3vw, 24px);
-    row-gap: 0;
+    gap: clamp(14px, 4vw, 24px);
     text-align: center;
     transform: none !important;
   }
   .hero-content > img {
     position: relative !important;
-    grid-column: 2;
-    grid-row: 1;
     order: 2;
     inset: auto !important;
     transform: none !important;
-    width: clamp(92px, 22vw, 132px) !important;
-    height: clamp(92px, 22vw, 132px) !important;
+    width: clamp(140px, 42vw, 220px) !important;
+    height: clamp(140px, 42vw, 220px) !important;
     max-width: 100%;
     object-fit: cover;
     margin: 0 !important;
@@ -50,8 +47,6 @@
   }
   .hero-title-group {
     position: relative;
-    grid-column: 1;
-    grid-row: 1;
     order: 1;
     inset: auto !important;
     transform: none !important;
@@ -80,8 +75,6 @@
     letter-spacing: 0 !important;
   }
   .hero-title-group + .theme-btn {
-    grid-column: 1 / -1;
-    grid-row: 2;
     order: 3;
     justify-self: center;
     margin-top: clamp(24px, 6vw, 40px) !important;
@@ -229,12 +222,12 @@
 }
 
 @media (max-width: 575px) {
-  .hero-content { width: min(100%, 390px); grid-template-columns: minmax(0, 1fr) clamp(88px, 25vw, 112px); column-gap: clamp(8px, 3vw, 16px); }
+  .hero-content { width: min(100%, 390px); }
   .hero-content .arabic-name { font-size: clamp(48px, 14vw, 68px) !important; }
   .hero-content .hero-role { font-size: clamp(7px, 2.15vw, 10px) !important; }
   .hero-content > img {
-    width: clamp(88px, 25vw, 112px) !important;
-    height: clamp(88px, 25vw, 112px) !important;
+    width: clamp(140px, 42vw, 180px) !important;
+    height: clamp(140px, 42vw, 180px) !important;
   }
   .hero-title-group + .theme-btn { margin-top: clamp(22px, 6vw, 32px) !important; }
 
@@ -247,10 +240,10 @@
 @media (max-width: 390px) {
   .main-header .container { padding-left: 14px; padding-right: 14px; }
   .main-hero-area > .container { padding-left: 14px; padding-right: 14px; }
-  .hero-content { grid-template-columns: minmax(0, 1fr) 88px; column-gap: 8px; }
+  .hero-content { width: min(100%, 360px); }
   .hero-content .arabic-name { font-size: 46px !important; }
   .hero-content .hero-role { font-size: 7px !important; }
-  .hero-content > img { width: 88px !important; height: 88px !important; }
+  .hero-content > img { width: 140px !important; height: 140px !important; max-width: 140px !important; }
   .service-item { padding-inline: 20px; }
 }
 
@@ -303,7 +296,7 @@
   /* FOOD / RESTAURANT — exactly 3 columns × 2 rows on phones */
   .restaurant-gallery {
     display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     column-gap: clamp(7px, 2.2vw, 11px) !important;
     row-gap: clamp(9px, 2.8vw, 14px) !important;
     width: 100% !important;

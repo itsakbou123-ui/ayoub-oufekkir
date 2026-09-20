@@ -1164,7 +1164,7 @@
   }
 
   .restaurant-gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: clamp(8px, 2.5vw, 12px) !important;
   }
 
@@ -1358,18 +1358,25 @@
 @media (max-width: 767px) {
     .restaurant-carousel { padding: 0 48px; }
     .restaurant-carousel .restaurant-gallery {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        flex-wrap: wrap !important;
         gap: 12px !important;
-        height: 250px !important;
-        max-height: 250px !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
     }
     .restaurant-carousel .restaurant-gallery .portfolio-item {
-        width: calc((100% - 24px) / 3) !important;
-        min-width: calc((100% - 24px) / 3) !important;
-        flex-basis: calc((100% - 24px) / 3) !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        flex-basis: auto !important;
     }
-    .restaurant-scroll-button { width: 36px; height: 36px; }
-    .restaurant-scroll-left { left: 2px; }
-    .restaurant-scroll-right { right: 2px; }
+    .restaurant-carousel .restaurant-gallery .photography-box img {
+        height: auto !important;
+        aspect-ratio: auto !important;
+        object-fit: contain !important;
+    }
+    .restaurant-scroll-button { display: none !important; }
 }
 </style>
 
