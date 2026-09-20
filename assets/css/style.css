@@ -1667,7 +1667,7 @@ h2.about-pre-title {
 
 
 .service-item h5 {
-    background: var(--primary-color);
+    background: #FF2B2B;
     margin-bottom: 60px;
     color: var(--black-color);
     font-family: var(--text-font);
