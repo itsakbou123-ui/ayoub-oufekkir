@@ -145,6 +145,11 @@ Version      : 1.0
      */
 
     var magnifPopup = function() {
+        $('.work-popup').each(function() {
+            var imageSource = $(this).find('img').attr('src');
+            if (imageSource) $(this).attr('href', imageSource);
+        });
+
         $('.work-popup').magnificPopup({
             type: 'image',
             removalDelay: 300,
